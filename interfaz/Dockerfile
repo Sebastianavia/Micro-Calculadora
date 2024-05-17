@@ -4,4 +4,4 @@ RUN npm install -g live-server
 WORKDIR /usr/src/app
 
 EXPOSE 8080
-CMD live-server --cors
+CMD live-server --port=8081 --cors

@@ -18,12 +18,10 @@ services:
       - "6060:6060"
   interfaz:
     build: ./interfaz
+    ports:
+      - "80:80"
     links:
       - suma
       - resta
       - multiplicacion
       - division
-    ports:
-      - "8081:8081"
-    volumes:
-      - ./interfaz:/usr/src/app

@@ -1,7 +1,7 @@
-FROM node
-RUN mkdir -p /usr/src/app
-RUN npm install -g live-server
-WORKDIR /usr/src/app
+FROM nginx:latest
 
-EXPOSE 8080
-CMD live-server --port=8081 --cors
+COPY . /usr/share/nginx/html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]

@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  interfaz:
+    build: .
+    ports:
+      - "80:80"

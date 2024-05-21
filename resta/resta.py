@@ -1,9 +1,3 @@
-
-"""
-Created on Mon Apr  6 15:07:08 2020
-
-@author: santoyo-yo Cristan Patiño
-"""
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 
@@ -22,3 +16,13 @@ def resta():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0',port='4040')
+
+
+
+#curl -X POST -H "Content-Type: application/json" -d '{"n1": 10, "n2": 5}' http://calculadora/resta/api/resta
+
+#192.168.49.2  
+
+#curl --resolve "calculadora:80:$( minikube ip )" -i http://calculadora
+
+#cors = CORS(app, origins='*')

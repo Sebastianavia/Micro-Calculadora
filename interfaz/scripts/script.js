@@ -126,10 +126,10 @@ function modificarDisplay() {
 }
 /*
 Funciones para hacer el llamado a las apis para realizar
-las operaciones marcadas
+las operaciones marcadas 
 */
 function obtenerSuma(val1, val2) {
-  var url = "http://localhost:3030/api/suma";
+  var url = "http://suma.default.svc.cluster.local:3030/api/suma";
 
   fetch(url, {
     method: "POST",
@@ -153,7 +153,7 @@ function obtenerSuma(val1, val2) {
 }
 
 function obtenerResta(val1, val2) {
-  var url = "http://localhost:4040/api/resta";
+  var url = "http://calculadora/resta/api/resta";
 
   fetch(url, {
     method: "POST",
@@ -177,7 +177,7 @@ function obtenerResta(val1, val2) {
 }
 
 function obtenerMultiplicacion(val1, val2) {
-  var url = "http://localhost:5050/api/multiplicacion";
+  var url = "http://calculadora/multiplicacion/api/multiplicacion";
 
   fetch(url, {
     method: "POST",
@@ -201,7 +201,7 @@ function obtenerMultiplicacion(val1, val2) {
 }
 
 function obtenerDivision(val1, val2) {
-  var url = "http://localhost:6060/api/division";
+  var url = "http://calculadora/division/api/division";
 
   fetch(url, {
     method: "POST",

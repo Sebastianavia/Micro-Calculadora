@@ -1,0 +1,46 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: calculadora-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+spec:
+  rules:
+    - host: calculadora
+      http:
+        paths:
+          - path: /resta
+            pathType: Prefix
+            backend:
+              service:
+                name: resta
+                port:
+                  number: 4040
+          - path: /suma
+            pathType: Prefix
+            backend:
+              service:
+                name: suma
+                port:
+                  number: 3030
+          - path: /multiplicacion
+            pathType: Prefix
+            backend:
+              service:
+                name: multiplicacion
+                port:
+                  number: 5050
+          - path: /division
+            pathType: Prefix
+            backend:
+              service:
+                name: division
+                port:
+                  number: 6060
+          - path: /interfaz
+            pathType: Prefix
+            backend:
+              service:
+                name: interfaz
+                port:
+                  number: 80
